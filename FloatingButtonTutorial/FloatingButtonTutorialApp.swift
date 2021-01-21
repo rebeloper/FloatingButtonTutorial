@@ -6,12 +6,15 @@
 //
 
 import SwiftUI
+import NavigationKit
 
 @main
 struct FloatingButtonTutorialApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            NavigationKitView {
+                ContentView()
+            }
         }
     }
 }

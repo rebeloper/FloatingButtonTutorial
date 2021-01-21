@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,9 @@
 		C9CC064125B9983B00129E5A /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC064025B9983B00129E5A /* ContentView.swift */; };
 		C9CC064325B9983E00129E5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CC064225B9983E00129E5A /* Assets.xcassets */; };
 		C9CC064625B9983E00129E5A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C9CC064525B9983E00129E5A /* Preview Assets.xcassets */; };
+		C9CC065025B9987700129E5A /* FloatingButton in Frameworks */ = {isa = PBXBuildFile; productRef = C9CC064F25B9987700129E5A /* FloatingButton */; };
+		C9CC065325B9989B00129E5A /* FloatingButtonHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9CC065225B9989B00129E5A /* FloatingButtonHelpers.swift */; };
+		C9CC065725B99D0100129E5A /* NavigationKit in Frameworks */ = {isa = PBXBuildFile; productRef = C9CC065625B99D0100129E5A /* NavigationKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +23,7 @@
 		C9CC064225B9983E00129E5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C9CC064525B9983E00129E5A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		C9CC064725B9983E00129E5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C9CC065225B9989B00129E5A /* FloatingButtonHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FloatingButtonHelpers.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CC065025B9987700129E5A /* FloatingButton in Frameworks */,
+				C9CC065725B99D0100129E5A /* NavigationKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,6 +60,7 @@
 			children = (
 				C9CC063E25B9983B00129E5A /* FloatingButtonTutorialApp.swift */,
 				C9CC064025B9983B00129E5A /* ContentView.swift */,
+				C9CC065225B9989B00129E5A /* FloatingButtonHelpers.swift */,
 				C9CC064225B9983E00129E5A /* Assets.xcassets */,
 				C9CC064725B9983E00129E5A /* Info.plist */,
 				C9CC064425B9983E00129E5A /* Preview Content */,
@@ -85,6 +92,10 @@
 			dependencies = (
 			);
 			name = FloatingButtonTutorial;
+			packageProductDependencies = (
+				C9CC064F25B9987700129E5A /* FloatingButton */,
+				C9CC065625B99D0100129E5A /* NavigationKit */,
+			);
 			productName = FloatingButtonTutorial;
 			productReference = C9CC063B25B9983B00129E5A /* FloatingButtonTutorial.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +123,10 @@
 				Base,
 			);
 			mainGroup = C9CC063225B9983B00129E5A;
+			packageReferences = (
+				C9CC064E25B9987700129E5A /* XCRemoteSwiftPackageReference "FloatingButton" */,
+				C9CC065525B99D0100129E5A /* XCRemoteSwiftPackageReference "NavigationKit" */,
+			);
 			productRefGroup = C9CC063C25B9983B00129E5A /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,6 +153,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C9CC065325B9989B00129E5A /* FloatingButtonHelpers.swift in Sources */,
 				C9CC064125B9983B00129E5A /* ContentView.swift in Sources */,
 				C9CC063F25B9983B00129E5A /* FloatingButtonTutorialApp.swift in Sources */,
 			);
@@ -328,6 +344,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		C9CC064E25B9987700129E5A /* XCRemoteSwiftPackageReference "FloatingButton" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/exyte/FloatingButton.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+		C9CC065525B99D0100129E5A /* XCRemoteSwiftPackageReference "NavigationKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rebeloper/NavigationKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.3.10;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C9CC064F25B9987700129E5A /* FloatingButton */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9CC064E25B9987700129E5A /* XCRemoteSwiftPackageReference "FloatingButton" */;
+			productName = FloatingButton;
+		};
+		C9CC065625B99D0100129E5A /* NavigationKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = C9CC065525B99D0100129E5A /* XCRemoteSwiftPackageReference "NavigationKit" */;
+			productName = NavigationKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = C9CC063325B9983B00129E5A /* Project object */;
 }
